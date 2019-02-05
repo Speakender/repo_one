@@ -1,0 +1,24 @@
+this is a test for playing around in vi.
+pressing i moves you from command mode to insert mode so you can type. pressing a will also work.
+arrows keys will navigate up down left right
+
+also
+j -left
+l -right
+j -down
+k -up
+
+
+escape key breaks out of insert mode and goes to command mode.
+from command mode
+x deletes a charater
+5x deletes 5 chacters
+
+d deletes a word
+5d would delete 5 words
+dd deletes a line
+
+:w writes
+:q quits vi editor
+:wq would write and quit
+:q! quit without saving
