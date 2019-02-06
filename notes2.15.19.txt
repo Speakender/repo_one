@@ -1,0 +1,364 @@
+# I can probably just take my notes in this
+#
+# Git tracks files and directories
+# create a public github repository
+#
+#
+#
+# git clone <url>
+#
+# cd <repo name>
+#
+# git status
+# git remote -v
+#
+# history | grep <query>
+#  history | grep clone
+# to add files to the repository  - git add
+# git add filename.fileextention
+#
+#  first time commit only
+# git config --global user.email "<speakender3@gmail.com>
+# git config --global user.ame "Cameron Gulley"
+#
+# git push origin master - pushes changes to the repository
+# git pull origin master - pulls changes to the local repository
+#
+#
+#  history | grep git
+#     3  git clone https://github.com/Speakender/repo_one.git
+#     6  git status
+#    15  git add test1
+#    17  git config --global user.email "Speakender3@gmail.com"
+#    18  git config --global user.name "Cameron Gulley"
+#    19  git status
+#    20  git log
+#    23  git commit -m "test file one"
+#    26  git add test1
+#    27  git add test 1
+#    28  git add test1
+#    29  git push origin master
+#    30  history | grep git
+#
+# adding or removing a file
+# committed means that it stores it to the .git subfolder
+#
+# git push
+# git pull
+# git branch -vv
+#
+# git branch (shows branches)
+# git branch dev (creates dev branch)
+# git chechout dev (moves you to dev branch)
+# git checkout -b dev (creates dev branch and moves you to dev branch)
+# must add and commit file before changes will be different over branches
+#
+#
+#
+#
+#
+#
+#
+# indentation matters
+# use spaces, not tabs
+#
+#
+#
+# python interpreter shell
+# just typing python will take you to the shell
+# ipython will take to the interactice python shell. use this better
+#
+#
+#
+#
+#   variables
+#
+# same_var = "some string"
+# can't lead variable with a number
+# alpha-numeric, and _ only characters
+# variables SHOULD be all lowercase and _ for work separation
+# not MyNetworkDevice
+# do my_network_device
+#
+#
+# print
+# (shabang line)
+#  #!/usr/bin/env python
+# chmod 755 to make a file directly executable
+#
+# single or double quotes
+# triple quotes allows for multi-line variables
+#
+# importing a library
+# import re (example)
+#
+#  dir(some_var) shows all the strings for the variable
+# example - some_var.upper will make the variable all uppercase
+#
+#  print(some_var.upper())
+# or some_var.upper()
+#
+#
+# split...
+# ip_address = "192.168.1.1"
+# ip_address.split(".")
+#
+# strip will remove excess white space
+##
+#  checking strings for text - "192.168" in var1
+# use r before a sting so backslashes don't get escaped
+##
+# In [23]: windows_path = "c:\new_dir\test this\whatver"
+#
+# In [24]: print(windows_path)
+# c:
+# ew_dir  est this\whatver
+#
+# In [25]: windows_path = r"c:\new_dir\test this\whatver"
+#
+# In [26]: print(windows_path)
+# c:\new_dir\test this\whatver
+#
+#
+# print("{}".format(ip_address))
+# format example {:>25} 25 spaces and right aligned
+#
+#  f string
+# f"This is an f string"
+# f"This is an ip address {ip_address}"
+#
+# In [32]: ip_address
+# Out[32]: '192.168.1.1'
+#
+# In [33]: f"This is an ip address {ip_address}"
+# Out[33]: 'This is an ip address 192.168.1.1'
+#
+# %s will insert a variable
+# "This is an ip address %s (ip_address)"
+#
+#############################################################################
+# maths
+# a = 1
+# b = 2
+# a + b, etc
+#############################################################################
+#
+# In [1]: f = open("afilename.txt", "w")
+#
+# In [2]: f.write("sometext")
+# Out[2]: 8
+#
+# In [3]: f.close()
+#
+#
+# with open(file_name, "w") as f:
+#   f.write(output)
+#
+# with open(file_name) as f:
+#   output = f.read()
+##############################################################################
+# lists
+# zero-based indices
+# .append()
+# .pop()
+#
+# In [5]: my_list = ['whatever', 0, True, 4.5]
+#
+# In [6]: my_list[0]
+# Out[6]: 'whatever'
+#
+# In [7]: my_list[-0]
+# Out[7]: 'whatever'
+#
+# In [8]: my_list[-30]
+# ---------------------------------------------------------------------------
+# IndexError                                Traceback (most recent call last)
+# <ipython-input-8-4c75801e7417> in <module>
+# ----> 1 my_list[-30]
+#
+# IndexError: list index out of range
+#
+# In [9]: my_list[-3]
+# Out[9]: 0
+#
+# In [10]: my_list[-1]
+# Out[10]: 4.5
+#
+# In [11]: my_list[4]
+# ---------------------------------------------------------------------------
+# IndexError                                Traceback (most recent call last)
+# <ipython-input-11-d8d3b5435ffd> in <module>
+# ----> 1 my_list[4]
+#
+# IndexError: list index out of range
+#
+# In [12]: my_list[3]
+# Out[12]: 4.5
+#
+# In [13]: my_list.append('newwords')
+#
+# In [14]: my_list
+# Out[14]: ['whatever', 0, True, 4.5, 'newwords']
+#
+#
+# In [15]: my_list.pop()
+# Out[15]: 'newwords'
+#
+# In [16]: my_list
+# Out[16]: ['whatever', 0, True, 4.5]
+#
+# In [17]: ip_add = "10.10.10.1"
+#
+# In [18]: ip_add.split('.')
+# Out[18]: ['10', '10', '10', '1']
+#
+# In [19]: ip_add
+# Out[19]: '10.10.10.1'
+#
+# In [20]: ip_add.split('.')
+# Out[20]: ['10', '10', '10', '1']
+#
+# In [21]: octetcs = ip_add.split('.')
+#
+# In [22]: octetcs
+# Out[22]: ['10', '10', '10', '1']
+#
+# In [23]: ".".join(octetcs)
+# Out[23]: '10.10.10.1'
+#
+# In [24]: octets = ip_add.split('.')
+#
+# In [25]: ".".join(octets)
+# Out[25]: '10.10.10.1'
+#
+# a tupple is a list that cannot change
+#
+# my_tupple = (1, 2, "sometext")
+#
+#######################################################################
+#
+# Boolean operators
+#
+# values can be true or not true
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+########################################################################
+#
+# for loops (or for each)
+#
+# In [28]: mylist = list(range(10))
+#
+# In [29]: mylist
+# Out[29]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+#
+# In [30]: mylist.pop(0)
+# Out[30]: 0
+#
+# In [31]: mylist
+# Out[31]: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+#
+# In [32]: for my_var in mylist
+#   File "<ipython-input-32-235e4cc4817b>", line 1
+#     for my_var in mylist
+#                         ^
+# SyntaxError: invalid syntax
+#
+#
+# In [33]: for my_var in mylist:
+#     ...:     print(my_var)
+#     ...:
+# 1
+# 2
+# 3
+# 4
+# 5
+# 6
+# 7
+# 8
+# 9
+#
+# In [34]: for my_var in mylist:
+#     ...:     print(my_var)
+#     ...:     break
+#     ...:
+# 1
+#
+#
+#
+#
+#
+#
+###############################################################################
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+##
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+
